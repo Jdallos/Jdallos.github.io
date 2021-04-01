@@ -1,0 +1,339 @@
+
+  html{
+      margin:0;
+  }
+  
+  
+  .navbar{
+        position:fixed;
+        background-color:rgb(203, 206, 145);
+        width: 100%;
+        top:0%;
+        left:0%;
+        z-index:1;
+        max-height:60px;
+        opacity:90%; 
+    }
+
+    /*Link within nav bar style*/
+    .navbar a{
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 15px;
+        font-size: 25px;
+        border-right-style: solid;
+        border-right-width: 0.5px;
+        font-family: "courier new", Monospace;
+        text-decoration: none;
+    }
+
+    /*make navbar highlight when hover*/
+    /*.navbar a:hover{
+        Background-color: azure;
+        color: gray;
+    }*/
+
+    .active{
+        background-color: rgb(204, 203, 203);
+    }
+
+    /*NEEDS TO BE RESPONSIVE*/
+    #nav-title{
+        position:relative;
+        float: right;
+        right: 5%;
+        bottom: 15px;
+        font-size: 30px;
+        font-family: "brush script mt", cursive;
+        display: inline;
+    }
+
+    .navbar .icon{
+        display:none;
+    }
+
+    /*Dropdown CSS*/
+    .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+    .dropdown .dropbtn {
+        font-size: 25px;
+        font-weight: 549;
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-right-color: black;
+        border-bottom:none;
+        border-left:none;
+        border-top:none;
+        outline: none;
+        color: black;
+        padding: 15px;
+        background-color: inherit;
+        font-family: "courier new", Monospace; /* when marked as inherit... Important for vertical align on mobile phones */
+        margin: 0; /* Important for vertical align on mobile phones */
+      }
+      
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        Background-color: azure;
+        color: gray;
+      }
+    
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(203, 206, 145);
+        min-width: 160px;
+        z-index: 1;
+      }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+        Background-color: azure;
+        color: gray;
+    }
+  
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    #form{
+        width:100%;
+        position: relative;
+        font-family: garamond, serif;
+        font-size: 20px;
+        color:green;
+        font-weight: bold;
+    }
+
+    #email{
+        width: 50%;
+        padding: 10px;
+        border: 2px solid green;
+    }
+
+    #submit{
+        padding:10px;
+    }
+
+    .new-article{
+        position: relative;
+        top:50px;
+        border: solid;
+        border-color: black;
+        border-width: 2px;
+        width: 100%;
+        height: auto;
+    }
+
+    .new-article img{
+        display:block;
+    }
+
+    .new-article::after{
+        content:"";
+        clear:both;
+        display:table;
+    }
+
+    .new-article-image{
+        float:left;
+        width:auto;
+    }
+
+    /*Better, now responsive but image too small and text aligned wrong...*/
+    .new-article-text{
+        float:left;
+        width:40%;
+    }
+
+    body{
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+        margin:0;
+        font-weight:549;
+    }
+
+    body::after {
+        content: "";
+        background-image:  url("background.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+      }
+
+    main{
+        width:70%;
+        position: relative;
+        left:15%;
+        text-align: center;
+    }
+
+
+    ul{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+    }
+
+    .heading{
+        color:indigo;
+        font-family: Garamond, serif;
+    }
+
+    .all-text{
+        position: relative;
+        text-align: center;
+        font-family: monaco, monospace;
+        font-size: 20px;
+    }
+
+    .all-textl{
+        position: relative;
+        text-align: left;
+        font-family: monaco, monospace;
+        font-size: 20px;
+    }
+
+    .list{
+        text-align: left;
+    }
+
+    #dive-in::after{
+        content:"";
+        clear: both;
+        display: table; 
+    }
+
+
+    .column{
+        float:left;
+        width:31%;
+        padding:5px;
+    }
+
+    @media screen and (max-width: 500px){
+        .column{
+            width:100%;
+        }
+
+        .new-article-text{
+            width:100%;
+        }
+
+        .new-article-image{
+            width:100%;
+        }
+    }
+
+    @media screen and (max-width: 850px){
+        .navbar a:not(:first-child), .dropdown .dropbtn {
+            display: none;
+        }
+
+        .navbar a.icon {
+            float: right;
+            display: block;
+        }
+    
+        .navbar.responsive {
+            position: relative;
+            z-index:1;
+        }
+    
+        .navbar.responsive a.icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        /*Not perfect but workable*/
+        .navbar.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+            background-color:rgb(203, 206, 145);
+        }
+
+        #nav-title{
+            position:absolute;
+           top:-18px;
+           right: 75px;
+        }
+
+        .navbar.responsive .dropdown {
+            float: none;
+            background-color:rgb(203, 206, 145);
+        }
+
+        .navbar.responsive .dropdown-content {
+            position: relative;
+        }
+
+        .navbar.responsive .dropdown .dropbtn {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+    
+        #email{
+            width: 50%;
+            padding: 10px;
+            border: 2px solid green;
+        }
+
+        #submit{
+            padding:10px;
+        }
+    }
+
+    .footer{
+        width: 100%;
+        background-color: rgb(203, 206, 145);
+        text-align: center;
+        overflow: hidden;
+        opacity:90%;
+        height: 6vh;
+    }
+
+    .footer p {
+        position: relative;
+        margin: 0;
+        
+
+    }
+    .footer a{
+        position: relative;
+        bottom:5vh;
+        float:right;
+        clear:right;
+    }
+
+    /*About page*/
+    #me-image{
+        height: 40%;
+        width: 40%;
+    }

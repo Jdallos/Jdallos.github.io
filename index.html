@@ -1,0 +1,162 @@
+<!-- THINGS TO DO:
+
+5. WRITE content-->
+
+<!--TO DO:  git -->
+<!--TOP ISSUES AFTER: IMG AND TEXT responsive DIV LAYOUT,-->
+
+<!--Next: write more articles.-->
+
+<!--ISSUES for first update: 
+    ARTICLE BOX, responsive now but want to change text position and image size
+    Nav bar responsive tidy up when small screen
+    Remove the underline of the links at bottom
+    banner
+    email sign up box implement
+    details to look professional e.g. twitter logos etc
+    OPEN SIDE SCROLLER for article list
+    side content?
+    possibly using flexbox, restructure the main so not reduces to 80%- this causes problems.
+    Responsive nav bar highlights active when in dropdown
+    background less opaque at edges?
+    update about links
+    update about picture and add more
+    embed spotify player/ youtube vid in about
+    add comments sections
+    update contacts
+    speed up background image load
+ -->
+
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <title> Home- Learning To Code</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Blog about coding">
+    <meta name="keywords" content="Beginner coding, learning to code, how to make a blog, CS50x, FreeCodeCamp">
+    <meta name="author" content="Josh Dallos">
+    <link rel="stylesheet" href="Blog-CSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "navbar") {
+            x.className += " responsive";
+            } else {
+            x.className = "navbar";
+            }
+            }
+    </script>  
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="myNavbar">
+            <a href= "Blog-Homepage.html" class= "active" target="_self" >Home</a>
+            <a href= "Blog-About.html" target="_self" >About</a>
+            <div class="dropdown">
+                <button class="dropbtn">Blog<i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">    
+                    <a href= "Blog-Blogpage.html" target="_self" >Full blog list</a>
+                    <a href= "Not_ready.html" target="_self" >Most recent Post</a>
+                    <a href= "Not_ready.html" target="_self" >Top Post</a>
+                    <a href= "Not_ready.html" target="_self" >Coding Hacks</a>
+                </div>
+            </div>
+            <a href= "Blog-Links.html" target="_self" >Useful links</a>
+            <a href= "Blog-contact.html" target="_self" >Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <p id="nav-title"> Josh Dallos Blog</p>
+        </nav>
+    </header>
+    <main>
+        <br><br><br>
+        <h1 class="all-text heading" style="font-size:40px"> Congratulations on making it this far.</h1>
+        <br>
+        <p class="all-text"> It's kind of crazy, right? We all use them, we all want more of them, we're all 
+            kind of waiting for the next one to come out, but how many people make it this far?
+            Become interested enough in whats going on underneath the hood, or even just behind 
+            flashing screen, to want to learn more.
+            Well you do, me to.
+            Welcome to the club.
+        </p>
+        <br><br>
+        <!--FINE BUT NEED TO FIGURE OUT HOW TO COLLECT AND STORE THIS DATA-->
+        <form id="form">
+            <label for="email">Sign up to occasionally hear something worthwhile:</label><br>
+            <input type="email" id="email" name="email">
+            <input type="submit" id="submit" value="submit">
+        </form>
+        <br>
+        <article>
+            <a href= "Blog-About.html" target="_blank">
+                <div class="new-article">   
+                    <div class="new-article-image">
+                        <img src="Coding-image-1.jpg"  alt="A picture of me, linking to the latest article, about me">
+                    </div>
+                    <div class="new-article-text">
+                        <h3 class="all-text heading">All About Me</h3>
+                        <p class="all-text"> A proper introduction.</p><p class="all-text"> My background and how I got into coding.</p>
+                    </div>
+                </div>
+            </a>
+        </article>
+        <br><br>
+        <br><br>
+        <h3 class="all-text heading" style="font-size:35px"> Why are we here?</h3>
+        <p class="all-text"> Blogging is an important part of learning to code. Reading blogs as a way of learning about programming, creating a blog to put those new found skills 
+        into practice, not to mention a kind of semi-productive procrastination. Reading is good, reading on a subject you are interested in is even better
+        so being here at all is a good thing. No prizes for thinking of a less productive use of your time, eh?</p>
+
+        <p class="all-text">This blog is an ongoing project but here are a few things you can expect to find, and  a few reccommendations of where to start.</p>
+        <br>
+        <ul class="list all-text" style="font-size:18px">
+            <li>The journey from knowing nothing about coding to being a month in. What happens? I'm talking Harvards CS50x, FreeCodeCamp, building 
+                this very blog you are reading and more. Its a wild ride, updated regularly.
+                <ul class="all-text" style="text-align:left; font-size:17px;">
+                    <li>You can start it <a href="Blog-About.html">here.</a></li>
+                    <li> And check in with where we are at <a href="Not_ready.html"> here.</a></li>
+                </ul>
+            </li>
+            <li>A condensed and easy to understand collection of <a href="Not_ready.html">Technical Bits</a> the most useful things I have learnt.</li>
+            <li> <a href="Not_ready.html">Motivation</a>, we all need it.</li>
+            <li>A guide to making your very <a href="Not_ready.html">own blog</a>.</li>
+        </ul>
+        <br>
+        <div class="all-text" id="dive-in">
+            <h4 class="heading" style="font-size: 30px;">Dive in</h4>
+            <div class="column">
+                <a href= "Blog-About.html" target="_self">About me
+                    <img src="Head-shot.jpg" style="width:100%" alt="A picture of me, linking to the latest article, about me">
+                <p>- A little history about your me and my journey to get here.</p>
+                </a>
+            </div>
+            <div class="column">
+                <a href= "Not_ready.html" target="_self">Top 10 starter tips
+                    <img src="getting-started-image.jpg" style="width:100%"  alt="A picture saying 'lets get started'">
+                <p>-This is gold dust, enjoy!</p>
+                </a>
+            </div>
+            <div class="column">
+                <a href= "Not_ready.html" target="_self">Is coding for you
+                    <img src="is-coding-right-img.jpg" style="width:100%"  alt="A picture of someone scratching their head">
+                    <p>-An honest look at what brings us here, and what carries us forward.</p>
+                </a>
+            </div>
+        </div>
+        <br><br><br>
+        </main>
+    <footer class="footer">
+        <p> Josh Dallos Blog © All Rights Reserved</p>
+        <p style="font-size: 10px;">Build Version: 1 </p>
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                    src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
